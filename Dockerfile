@@ -2,6 +2,7 @@ FROM smebberson/alpine-nginx
 
 RUN apk update && apk add curl git mercurial bzr go && rm -rf /var/cache/apk/*
 
+ENV S6_BEHAVIOUR_IF_STAGE2_FAILS 2
 ENV GOROOT /usr/lib/go
 ENV GOPATH /gopath
 ENV GOBIN /gopath/bin
