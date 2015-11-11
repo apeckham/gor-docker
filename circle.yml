@@ -1,0 +1,9 @@
+machine:
+  services:
+    - docker
+    
+test:
+  override:
+    - docker login -u $DOCKER_USER -p $DOCKER_PASS -e $DOCKER_EMAIL quay.io
+    - docker build -t quay.io/apeckham/gor:$CIRCLE_BUILD_NUM .
+    - docker push quay.io/apeckham/gor:$CIRCLE_BUILD_NUM
