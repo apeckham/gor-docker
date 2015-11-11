@@ -1,3 +1,4 @@
 #!/usr/bin/with-contenv sh
 
+: ${NGINX_PROXY_PASS:?"NGINX_PROXY_PASS is required"}
 /bin/sed -i "s~NGINX_PROXY_PASS~$NGINX_PROXY_PASS~" /etc/nginx/nginx.conf

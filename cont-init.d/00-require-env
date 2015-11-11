@@ -1,4 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-: ${NGINX_PROXY_PASS:?"NGINX_PROXY_PASS is required"}
-: ${GOR_OUTPUT_HTTP:?"GOR_OUTPUT_HTTP is required"}

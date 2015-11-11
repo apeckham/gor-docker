@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv sh
+
+if [ -n "$GOR_OUTPUT_HTTP" ]; then
+  rm /etc/services.d/gor/down
+fi

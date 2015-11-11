@@ -1,0 +1,4 @@
+Docker image for load testing a staging environment with real traffic, running:
+
+- nginx, proxying all HTTP requests to $NGINX_PROXY_PASS
+- gor, capturing all HTTP requests and forwarding them to $GOR_OUTPUT_HTTP (optional)
