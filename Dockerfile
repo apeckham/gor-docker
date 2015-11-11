@@ -8,4 +8,7 @@ ENV GOBIN /gopath/bin
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
 
 RUN go get github.com/buger/gor
-COPY gor.s6 /etc/services.d/gor/run
+
+COPY nginx.conf /etc/nginx/
+COPY services.d /etc/services.d
+COPY cont-init.d /etc/cont-init.d

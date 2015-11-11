@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv sh
+
+/bin/sed -i "s~NGINX_PROXY_PASS~$NGINX_PROXY_PASS~" /etc/nginx/nginx.conf
