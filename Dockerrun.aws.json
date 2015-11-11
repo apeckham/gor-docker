@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "quay.io/apeckham/gor:7"
+    "Name": "quay.io/apeckham/gor:8"
   },
   "Ports": [
     {

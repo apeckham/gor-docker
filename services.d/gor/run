@@ -1,3 +1,3 @@
 #!/usr/bin/execlineb -P
 
-/gopath/bin/gor -input-raw :80 -output-http=$GOR_OUTPUT_HTTP -debug -verbose
+/gopath/bin/gor -input-raw :80 -output-http=$GOR_OUTPUT_HTTP
