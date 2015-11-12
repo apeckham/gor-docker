@@ -1,5 +1,7 @@
-Docker image for load testing a staging environment with real traffic, running:
+Docker image that is a pass-through nginx proxy for your production traffic, and also sends every request to a staging environment, for load testing.
 
-- nginx, proxying all HTTP requests to $NGINX_PROXY_PASS
+Configure with environment variables:
 
-- gor (https://github.com/buger/gor), capturing all HTTP requests and forwarding them to $GOR_OUTPUT_HTTP (optional)
+NGINX_PROXY_PASS = production site (including http://) that nginx proxies all requests to
+
+GOR_OUTPUT_HTTP = optional staging site (including http://) that gor forwards all requests to. Responses are discarded. https://github.com/buger/gor
