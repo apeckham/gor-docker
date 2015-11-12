@@ -10,6 +10,9 @@ ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
 
 RUN go get github.com/buger/gor
 
+RUN ln -sf /dev/stdout /var/log/nginx/access.log && \
+    ln -sf /dev/stderr /var/log/nginx/error.log
+
 COPY nginx.conf /etc/nginx/
 COPY services.d /etc/services.d
 COPY cont-init.d /etc/cont-init.d
